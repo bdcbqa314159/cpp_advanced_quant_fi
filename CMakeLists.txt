@@ -12,3 +12,5 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_subdirectory(quant_fi)
 
+add_subdirectory(testing)
+

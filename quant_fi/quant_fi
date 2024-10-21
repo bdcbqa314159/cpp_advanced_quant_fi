@@ -1,1 +1,4 @@
-#pragma_once
+#pragma once
+
+#include "./includes/random.hpp"
+#include "./includes/equity.hpp"

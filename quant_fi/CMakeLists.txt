@@ -2,6 +2,9 @@ project(quant_fi)
 
 set(includes includes/)
 set(sources
+
+    src/random.cpp
+    src/equity.cpp
     
 )
 
