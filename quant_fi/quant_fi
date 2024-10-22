@@ -5,3 +5,4 @@
 #include "./includes/linalg.hpp"
 #include "./includes/fx.hpp"
 #include "./includes/rates.hpp"
+#include "./includes/credit.hpp"
