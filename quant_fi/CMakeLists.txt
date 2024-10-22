@@ -7,6 +7,7 @@ set(sources
     src/equity.cpp
     src/linalg.cpp
     src/fx.cpp
+    src/rates.cpp
     
 )
 
