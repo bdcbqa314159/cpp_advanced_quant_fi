@@ -5,6 +5,8 @@ set(sources
 
     src/random.cpp
     src/equity.cpp
+    src/linalg.cpp
+    src/fx.cpp
     
 )
 

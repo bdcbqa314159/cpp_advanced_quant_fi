@@ -2,3 +2,5 @@
 
 #include "./includes/random.hpp"
 #include "./includes/equity.hpp"
+#include "./includes/linalg.hpp"
+#include "./includes/fx.hpp"
