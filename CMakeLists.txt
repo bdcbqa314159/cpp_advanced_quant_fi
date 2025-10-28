@@ -27,7 +27,11 @@ find_package(pybind11 REQUIRED)
 MESSAGE(STATUS "the source directory is: ${CMAKE_SOURCE_DIR}")
 MESSAGE(STATUS "the binary directory is: ${CMAKE_BINARY_DIR}")
 
-set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR}/install)
+# Set default install location (can be overridden with -DCMAKE_INSTALL_PREFIX=<path>)
+if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+    set(CMAKE_INSTALL_PREFIX "${CMAKE_SOURCE_DIR}/install" CACHE PATH "Installation directory" FORCE)
+endif()
+MESSAGE(STATUS "Install prefix: ${CMAKE_INSTALL_PREFIX}")
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
@@ -35,9 +39,3 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 add_subdirectory(libraries)
 add_subdirectory(apps)
-
-# Simple installation to ${CMAKE_INSTALL_PREFIX} (defaults to ./install)
-install(EXPORT wab_advanced_quant_fi-targets
-    FILE wab_advanced_quant_fi-targets.cmake
-    DESTINATION lib/cmake/wab_advanced_quant_fi
-)

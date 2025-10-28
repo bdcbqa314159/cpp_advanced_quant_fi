@@ -151,4 +151,5 @@ docs/
 compile_commands.json
 code_from_book/
 archive/
-struct
+struct/
+install/
