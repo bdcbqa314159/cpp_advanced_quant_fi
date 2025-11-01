@@ -14,7 +14,7 @@ This project implements advanced quantitative finance models and algorithms in C
 
 ## Project Structure
 
-```
+``` bash
 cpp_advanced_quant_fi/
 ├── apps/                          # C++ executable applications
 │   ├── equities.cpp              # Equity options examples
@@ -71,11 +71,13 @@ make install
 ```
 
 This will install:
+
 - C++ executables to `install/bin/`
 - C++ libraries to `install/lib/`
 - Python module to `install/python/`
 
 Default installation directory is `<project-root>/install`. You can customize with:
+
 ```bash
 cmake -DCMAKE_INSTALL_PREFIX=/custom/path ..
 ```
@@ -119,6 +121,7 @@ export PYTHONPATH=/path/to/install/python:$PYTHONPATH
 ```
 
 For default installation:
+
 ```bash
 export PYTHONPATH=$(pwd)/install/python:$PYTHONPATH
 ```
@@ -164,6 +167,7 @@ The test suite automatically detects the installed Python module and validates a
 
 - **Python Bindings**: See [libraries/wab_advanced_qf_py/README.md](libraries/wab_advanced_qf_py/README.md)
 - **API Reference**: Use Python's built-in help:
+  
   ```python
   import wab_advanced_qf_py as qf
   help(qf.EQ1)
@@ -182,6 +186,7 @@ The test suite automatically detects the installed Python module and validates a
 ### CMake Configuration
 
 The build system uses CMake with the following key features:
+
 - Automatic dependency management
 - Python module generation via pybind11
 - RPATH configuration for proper library linking
